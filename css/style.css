@@ -44,19 +44,17 @@ height:100%;
 z-index:9999;
 background:url( "../images/ajax-loader.gif") 50% 50% no-repeat #222222;
 }
+
 .logo {
-position:relative;
-display:inline-block;
-text-indent: 100%;
-white-space: nowrap;
-overflow: hidden;
-width: 100%;
-height: 180px;
-}
-.logo-inner {
-width: 100%;
-height: 100%;
-display: inline-block;
+  position:relative;
+  display:inline-block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 200px;
+  height: 180px;
+  background-size:contain;
+  background: url("../images/logo.png") center no-repeat;
 }
 
 #mainHolder>footer{
