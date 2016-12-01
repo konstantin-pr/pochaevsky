@@ -425,7 +425,31 @@ text-decoration:underline;
 .list1{
 margin-top: 5px;
 }
-.list1>li{
+.list1 h3 {
+  font-size: 16px;
+  line-height: 18px;
+  color: goldenrod;
+}
+.list1 h4 {
+  font-size: 14px;
+  line-height: 20px;
+  color: lightgray;
+  letter-spacing: 0.5px;
+
+}
+.wrapper .town, .wrapper .town + h3 {
+  display: inline-block; margin-right: 40px;
+}
+.wrapper .town {
+  color: goldenrod;
+}
+
+.list1 p {
+  padding-top: 4px;
+  color: white;
+  font-size: 13px;
+}
+.list1 > li{
 position: relative;
 display: inline-block;
 width: 260px;
@@ -573,17 +597,25 @@ letter-spacing: -1px;
 padding-bottom: 22px;
 }
 h3 {
-font: 14px/17px 'Antiqua Regular', sans-serif;
-font-weight: 700;
-color: #fff;
-text-transform: uppercase;
-text-shadow: #1d1d1d 0 1px 3px;
-padding-bottom: 3px;
-letter-spacing: -1px;
+  font: 14px/17px 'Antiqua Regular', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: #1d1d1d 0 1px 3px;
+  padding-bottom: 3px;
+  letter-spacing: -1px;
 }
 p {
-text-transform: uppercase;
-padding-bottom: 18px;
+  text-transform: uppercase;
+  padding-bottom: 18px;
+}
+
+.nopad.descr{
+    text-transform: uppercase;
+    padding-bottom: 18px;
+    color: #fff;
+    font-size: 110%;
+    margin-bottom: 20px;
 }
 /*additional classes*/
 .block {
