@@ -197,7 +197,7 @@ margin-bottom: 17px;
 font: 10px/12px Arial, sans-serif;
 font-style: normal;
 color: #fff;
-text-transform: uppercase;
+/*text-transform: uppercase;*/
 text-shadow: #2d2d2c 0 1px 3px;
 text-align: center;
 display: block;
@@ -349,7 +349,7 @@ display: inline-block;
 position: relative;
 font: 14px/17px 'Arial', sans-serif;
 font-weight: 600;
-text-transform: uppercase;
+/*text-transform: uppercase;*/
 color: #211c1b;
 background: url(../images/more_bg.jpg);
 text-shadow: #b0b0b0 0 1px 3px;
@@ -606,8 +606,9 @@ h3 {
   letter-spacing: -1px;
 }
 p {
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   padding-bottom: 18px;
+  font-size: 13px;
 }
 
 .nopad.descr{
