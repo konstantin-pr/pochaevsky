@@ -70,7 +70,7 @@ width: 3000px;
 z-index:100;
 bottom:0px;
 height:76px;
-background: url(../images/footer_bg.png) center bottom repeat-x;
+background: url("../images/footer_bg.png") center bottom repeat-x;
 margin-left: -1500px;
 }
 #mainHolder>footer p{
@@ -88,7 +88,7 @@ color: #fff;
 position: absolute;
 width: 268px;
 height: 100%;
-background: url(../images/panel_bg.png);
+background: url("../images/panel_bg1.png");
 display: inline-block;
 left: -12px;
 z-index: 200;
