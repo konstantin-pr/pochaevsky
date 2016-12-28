@@ -783,6 +783,9 @@ width: 301px;
 }
 #form1 label>span{
 text-transform: uppercase;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 #form1 .success{
 position: relative;
