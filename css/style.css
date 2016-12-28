@@ -529,6 +529,10 @@ height: 792px;
 /*background: rgba (17, 124, 19, 0.7);*/
 background: rgba(9, 104, 15, 0.7);
 }
+
+
+
+
 .list3>li>div>div>h3{
 padding-bottom: 12px;
 }
@@ -635,8 +639,10 @@ p {
 .advice b {
     font-size: 110%;
 }
+
 .more {
   padding-top: 100px;
+  width: 108% !important;
 }
 
 .more p {
