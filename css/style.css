@@ -358,17 +358,22 @@ font: 14px/17px 'Arial', sans-serif;
 font-weight: 600;
 /*text-transform: uppercase;*/
 color: #211c1b;
-background: url(../images/more_bg.jpg);
+ background: url(../images/more_bg.jpg); 
 text-shadow: #b0b0b0 0 1px 3px;
 padding: 7px 12px;
 border-radius: 3px;
 -moz-border-radius: 3px;
 -webkit-border-radius: 3px;
 letter-spacing: -1px;
+    
+}
+
+.otp {
+    background: #e0a21d;
 }
 .readMore:hover {
 text-decoration: none;
-background: #11350F;
+
 }
 
 .readMore2 {
@@ -587,7 +592,7 @@ margin: 5px 22px 15px 0;
 color: #696969;
 }
 .color2{
-color: #fff;
+color:  #F5F5DC;
 }
 .w1,.w2,.w3{
 display: inline-block;
@@ -611,7 +616,7 @@ font: 24px/32px 'Antiqua Regular', sans-serif;
 font-weight: 700;
 color: #fff;
 text-shadow: #1d1d1d 0 1px 3px;
-padding-left: 12px;
+/*padding-left: 12px;*/
 padding-bottom: 12px;
 }
 h3 {
@@ -626,8 +631,8 @@ h3 {
 p {
   /*text-transform: uppercase;*/
   padding-bottom: 18px;
-  font-size: 19px;
-  line-height: 28px;
+ font-size: 16px;
+line-height: 22px;
   color:#fff;
 }
 
@@ -753,8 +758,8 @@ height: 286px;
 position: relative;
 background: url('../images/form_bg.png');
 border: none;
-color: dimGray;
-padding: 8px 2px;
+color: #fff;
+padding: 10px 5px;
 text-transform: uppercase;
 width: 256px;
 outline:none;
@@ -814,18 +819,24 @@ font-weight:normal;
 font-size: 10px;
 }
 /*end forms*/
+
+
 .benefits img {
   display: block;
   margin-bottom: 10px;
   height:86px;
   width:86px;
-  margin: auto;
+  margin: 10px auto;
+}
+
+.benefits .col-tret {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .benefits p {
-font-size: 18px;
-line-height: 24px;
-
+font-size: 16px;
+line-height: 22px;
 }
 
 .benefits {
@@ -837,7 +848,7 @@ line-height: 24px;
 }
 
 .opus {
-  margin-top: 60px;
+  margin-top:60px;
 }
 
 .opus li::before {
@@ -857,13 +868,53 @@ line-height: 24px;
 .col-tret {
   width: 33%;
   display: inline-block;
+  box-sizing: border-box;
+
 }
 p {font-style: italic; }
 
+.benefits-pad {
+  padding: 36px 15px 0 10px;
+}
+.benefits-pad  h3 {
+  padding-left:10px;
+}
 .opus li{
   font-style: italic;
 }
 
  .opus li a {
   font-style: normal;
+}
+
+.tphone {
+    color:#e5e22d;
+    font-size: 18px;
+    padding-bottom: 6px;
+    font-weight: bold;
+}
+.temail {
+    color: #e5ab2d;
+    font-size: 18px;
+}
+
+.contacts  {
+    padding-left: 280px !important;
+   
+}
+
+.contacts  h2  {
+    color: gold;
+}
+.contacts1 {
+     padding-top: 110px;
+}
+
+.contacts p {
+ 
+}
+
+
+.form1{
+    margin-top: 20px;
 }
