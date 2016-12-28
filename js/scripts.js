@@ -67,10 +67,10 @@ function initGallery(){
     });
     $('.list3>li')
     .live('mouseenter',function (){
-        $(this).find('>div').stop().animate({'bottom':'0px'},300,'easeOutExpo')
+        $(this).find('>div').stop().animate({'bottom':'0px'},550,'easeOutExpo')
     })
     .live('mouseleave',function (){
-        $(this).find('>div').stop().animate({'bottom':'-800px'},300)   
+        $(this).find('>div').stop().animate({'bottom':'-800px'},550)   
     });
     if ($(".list3").length) {
         $('.list3').cycle({
