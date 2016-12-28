@@ -526,7 +526,8 @@ bottom: 0px;
 left: 0px;
 width: 100%;
 height: 792px;
-background: rgba (17, 124, 19, 0.7);
+/*background: rgba (17, 124, 19, 0.7);*/
+background: rgba(9, 104, 15, 0.7);
 }
 .list3>li>div>div>h3{
 padding-bottom: 12px;
@@ -641,7 +642,11 @@ p {
 .more p {
   line-height: 22px;
   margin: auto;
-  padding-bottom: 18px;
+  padding-bottom: 19px;
+  font-size: 18px;
+}
+.more h2 {
+      margin-bottom: 20px;
 }
 .nopad.descr{
     text-transform: uppercase;
