@@ -599,12 +599,12 @@ h1 {
 margin-top: 36px;
 }
 h2 {
-font: 18px/22px 'Antiqua Regular', sans-serif;
+    font: 24px/32px 'Antiqua Regular', sans-serif;
 font-weight: 700;
 color: #fff;
 text-shadow: #1d1d1d 0 1px 3px;
-letter-spacing: -1px;
-padding-bottom: 22px;
+padding-left: 12px;
+padding-bottom: 12px;
 }
 h3 {
   font: 24px/18px 'Antiqua Regular', sans-serif;
@@ -622,7 +622,19 @@ p {
   line-height: 28px;
   color:#fff;
 }
+.advice {
+  letter-spacing: 1px;
+  font-size: 105%;
+}
 
+.more {
+  padding-top: 100px;
+}
+.more p {
+  line-height: 26px;
+  margin: auto;
+  padding-bottom: 8px;
+}
 .nopad.descr{
     text-transform: uppercase;
     padding-bottom: 18px;
