@@ -31,7 +31,8 @@ function initGallery(){
         itms.css({'opacity':'1'})
     } else {
         itms.css({'display':'block'})
-    }
+    };
+
     var itemW = itms.css('width');
     itms.live('mouseenter',function(){
         if (!MSIE){
@@ -70,7 +71,7 @@ function initGallery(){
         $(this).find('>div').stop().animate({'bottom':'0px'},550,'easeOutExpo')
     })
     .live('mouseleave',function (){
-        $(this).find('>div').stop().animate({'bottom':'-800px'},550)   
+        $(this).find('>div').stop().animate({'bottom':'-800px'},550)
     });
     if ($(".list3").length) {
         $('.list3').cycle({
@@ -92,19 +93,52 @@ function initGallery(){
         easing: 'easeOutExpo',
         speed: 400
     });
-}
 
+}
+function hoverGallery() {
+  var hItems = document.querySelectorAll(".small-coll > a");
+
+  console.log('hover', hItems);
+  $(hItems).on('mouseenter', function(){
+    console.log('this', $(this));
+    $(this).addClass('greenBg');
+    var imageSrc = $(this).attr('href');
+    var img = document.getElementById('grow');
+    $(img).attr("src", imageSrc);
+    var descr = $(this).next();
+    var largeDescr = document.getElementById('large-descr');
+    if (descr.hasClass('data-description')){
+      var contents = descr.children();
+      console.log('con', contents);
+
+      $(largeDescr).empty();
+      $(largeDescr).append(contents);
+      // $(contents).each(function(index, item){
+      //     console.log(item);
+      //     $(largeDescr).add(item);
+      //     console.log('large data-description', largeDescr);
+      // });
+
+    }
+  }).
+  on('mouseleave', function(){
+      $(this).removeClass('greenBg');
+  });
+}
 function switchGallery(n){
     var n1, n2;
     if (n == 2){
         n1 = 1; n2 = 0;
         splash.eq(1).stop().animate({'top':'0px','height':sh},1200,'easeInOutExpo');
         splash.eq(0).stop().animate({'top':-sh,'height':'0'},1200,'easeInOutExpo');
+        hoverGallery();
     } else {
         n1 = 0; n2 = 1;
         splash.eq(0).stop().animate({'top':'0px','height':sh},1200,'easeInOutExpo');
         splash.eq(1).stop().animate({'top':sh,'height':'0'},1200,'easeInOutExpo');
+        hoverGallery();
     }
+
 }
 
 function addAllListeners() {

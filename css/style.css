@@ -955,3 +955,90 @@ p {font-style: italic; }
 .form1{
     margin-top: 20px;
 }
+
+.gallery {
+  width: 680px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.row {
+
+}
+
+.large-col, .small-col {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
+.large-col1 {
+  width: 59%;
+  /*width: 450px;*/
+  position: relative;
+}
+
+.listdescr{
+  margin: 10px auto;
+  min-height: 250px;
+  height: auto;
+}
+.data-description {
+  display: none !important;
+}
+
+.large-col2 {
+  width: 40%;
+  position: relative;
+  /*width: 226px;*/
+}
+
+.small-coll {
+     width: 32%;
+     position: relative;
+    /*width: 147px;*/
+}
+
+.greenBg {
+  transition-property: 'all';
+transition-duration: 3s;
+transition-timing-function: ease-in;
+}
+ .greenBg::before {
+   content: "";
+   display: block;
+   position: absolute;
+   z-index: 2;
+   width: 130px;
+   height: 91px;
+   /*margin-top: 90px;*/
+    background: rgba(9, 104, 15, 0.7);
+
+
+ }
+
+.small-coll {
+  display: inline-block;
+
+}
+.small-coll a {
+  display: block;
+  transition-property: 'all';
+transition-duration: 3s;
+transition-timing-function: ease-in;
+
+}
+
+.small-coll a img{
+  width: 100%;
+  height: 100%;
+}
+
+.large-col img  {
+  height: 100%;
+  width: 100%;
+}
+.houses {
+  padding: 20px;
+}
