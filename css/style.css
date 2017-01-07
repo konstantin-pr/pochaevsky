@@ -860,6 +860,13 @@ font-size: 16px;
 line-height: 20px;
 }
 
+.disclaimer p {
+  margin-top: 20px;
+  color: goldenrod;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 .benefits {
   margin-top: 20px;
 }
@@ -960,6 +967,8 @@ p {font-style: italic; }
   width: 680px;
   margin: 20px 0;
   position: relative;
+  background: url("../images/townhouses/e1.jpg") right top no-repeat;
+  background-size: contain;;
 }
 
 .row {
@@ -971,69 +980,81 @@ p {font-style: italic; }
   vertical-align: top;
 }
 
-
+/*taunhouses wrapper*/
 
 .large-col1 {
-  width: 59%;
+  width: 424px;
   /*width: 450px;*/
   position: relative;
+  margin-left: 38%;
+}
+
+.gallery .row {
+  margin: 2px auto;
 }
 
 .listdescr{
-  margin: 10px auto;
-  min-height: 250px;
+  margin: 0px auto;
+  min-height: 40px;
   height: auto;
 }
+
 .data-description {
   display: none !important;
 }
 
 .large-col2 {
-  width: 40%;
   position: relative;
   /*width: 226px;*/
 }
 
-.small-coll {
-     width: 32%;
-     position: relative;
-    /*width: 147px;*/
+.planirovka-details {
+
 }
 
-.greenBg {
+.largeImg img {
+  width: 400px;
+  height: auto;
+}
+
+.small-coll {
+     width: 94px;
+     position: relative;
+     /*width: 147px;*/
+     display: inline-block;
+     margin: auto 2px;
+}
+.small-coll a {
+     border: 1px solid #fff ;
+     display: block;
+     height: 149px;
+}
+
+
+/*.greenBg {
   transition-property: 'all';
-transition-duration: 3s;
-transition-timing-function: ease-in;
+  transition-duration: 3s;
+  transition-timing-function: ease-in;
 }
  .greenBg::before {
    content: "";
    display: block;
    position: absolute;
    z-index: 2;
-   width: 130px;
-   height: 91px;
-   /*margin-top: 90px;*/
-    background: rgba(9, 104, 15, 0.7);
+   width: 101px;
+   height: 120px;
 
-
+   background: rgba(9, 104, 15, 0.7);
  }
+*/
 
-.small-coll {
-  display: inline-block;
-
-}
 .small-coll a {
   display: block;
   transition-property: 'all';
-transition-duration: 3s;
-transition-timing-function: ease-in;
-
+  transition-duration: 3s;
+  transition-timing-function: ease-in;
 }
 
-.small-coll a img{
-  width: 100%;
-  height: 100%;
-}
 
 .large-col img  {
   height: 100%;

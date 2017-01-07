@@ -102,22 +102,17 @@ function hoverGallery() {
   $(hItems).on('mouseenter', function(){
     console.log('this', $(this));
     $(this).addClass('greenBg');
-    var imageSrc = $(this).attr('href');
+    var imageSrc = $(this).attr('data-href');
     var img = document.getElementById('grow');
     $(img).attr("src", imageSrc);
     var descr = $(this).next();
     var largeDescr = document.getElementById('large-descr');
     if (descr.hasClass('data-description')){
       var contents = descr.children();
-      console.log('con', contents);
-
+      console.log('con', contents);1
       $(largeDescr).empty();
       $(largeDescr).append(contents);
-      // $(contents).each(function(index, item){
-      //     console.log(item);
-      //     $(largeDescr).add(item);
-      //     console.log('large data-description', largeDescr);
-      // });
+      
 
     }
   }).
