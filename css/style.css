@@ -1031,22 +1031,20 @@ p {font-style: italic; }
 }
 
 
-/*.greenBg {
-  transition-property: 'all';
-  transition-duration: 3s;
-  transition-timing-function: ease-in;
+ .greenBg {
+
 }
  .greenBg::before {
    content: "";
    display: block;
    position: absolute;
    z-index: 2;
-   width: 101px;
-   height: 120px;
-
-   background: rgba(9, 104, 15, 0.7);
+   width: 94px;
+   height: 149px;
+   
+   background: rgba(9, 104, 15, 0.4);
  }
-*/
+
 
 .small-coll a {
   display: block;
