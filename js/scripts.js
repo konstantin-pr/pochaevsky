@@ -107,12 +107,13 @@ function hoverGallery() {
     $(img).attr("src", imageSrc);
     var descr = $(this).next();
     var largeDescr = document.getElementById('large-descr');
+    $(largeDescr).slideToggle("fast");
     if (descr.hasClass('data-description')){
       var contents = descr.children();
       console.log('con', contents);1
       $(largeDescr).empty();
       $(largeDescr).append(contents);
-      
+
 
     }
   }).
