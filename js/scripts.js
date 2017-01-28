@@ -96,17 +96,17 @@ function initGallery(){
 
 }
 function hoverGallery() {
-  var hItems = document.querySelectorAll(".wrap .flat-item > a"); 
+  var hItems = document.querySelectorAll(".wrap .flat-item > a");
   $(hItems).on('mouseenter', function(){
     // console.log('this', $(this));
     $(this).addClass('greenBg');
-    var imageSrc = $(this).attr('data-href');
-    var img = document.getElementsByClassName('grow');
-    $(img).each(function(index, item){
-        $(item).attr("src", imageSrc);
-    });
-
-    var descr = $(this).next();
+    // var imageSrc = $(this).attr('data-href');
+    // var img = document.getElementsByClassName('grow');
+    // $(img).each(function(index, item){
+    //     $(item).attr("src", imageSrc);
+    // });
+    //
+    // var descr = $(this).next();
     // console.log('de',descr.children());
     var largeDescr = document.getElementsByClassName('listdescr');
     // $(largeDescr).each(function(index, item){
