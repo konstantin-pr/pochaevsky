@@ -96,25 +96,25 @@ function initGallery(){
 
 }
 function hoverGallery() {
-  var hItems = document.querySelectorAll(".small-coll > a");
+  var hItems = document.querySelectorAll(".wrap .flat-item > a");
 
-  console.log('hover', hItems);
+
   $(hItems).on('mouseenter', function(){
     console.log('this', $(this));
     $(this).addClass('greenBg');
     var imageSrc = $(this).attr('data-href');
-    var img = document.getElementById('grow');
-    $(img).attr("src", imageSrc);
+    var img = document.getElementsByClassName('grow');
+    $(img).each(function(index, item){
+        $(item).attr("src", imageSrc);
+    });
+
     var descr = $(this).next();
     var largeDescr = document.getElementById('large-descr');
     $(largeDescr).slideToggle("fast");
     if (descr.hasClass('data-description')){
       var contents = descr.children();
-      console.log('con', contents);1
       $(largeDescr).empty();
       $(largeDescr).append(contents);
-
-
     }
   }).
   on('mouseleave', function(){
