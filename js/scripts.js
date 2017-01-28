@@ -109,13 +109,22 @@ function hoverGallery() {
     });
 
     var descr = $(this).next();
-    var largeDescr = document.getElementById('large-descr');
-    $(largeDescr).slideToggle("fast");
-    if (descr.hasClass('data-description')){
+    console.log('de',descr.children());
+    var largeDescr = document.getElementsByClassName('listdescr');
+    $(largeDescr).each(function(index, item){
       var contents = descr.children();
-      $(largeDescr).empty();
-      $(largeDescr).append(contents);
-    }
+      $(item).slideToggle(500);
+      $(item).empty();
+      setTimeout(function(){
+          $(item).append(contents);
+          $(item).slideToggle(500);
+      }, 300)
+
+
+
+    });
+
+
   }).
   on('mouseleave', function(){
       $(this).removeClass('greenBg');
