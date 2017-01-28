@@ -96,11 +96,9 @@ function initGallery(){
 
 }
 function hoverGallery() {
-  var hItems = document.querySelectorAll(".wrap .flat-item > a");
-
-
+  var hItems = document.querySelectorAll(".wrap .flat-item > a"); 
   $(hItems).on('mouseenter', function(){
-    console.log('this', $(this));
+    // console.log('this', $(this));
     $(this).addClass('greenBg');
     var imageSrc = $(this).attr('data-href');
     var img = document.getElementsByClassName('grow');
@@ -109,20 +107,17 @@ function hoverGallery() {
     });
 
     var descr = $(this).next();
-    console.log('de',descr.children());
+    // console.log('de',descr.children());
     var largeDescr = document.getElementsByClassName('listdescr');
-    $(largeDescr).each(function(index, item){
-      var contents = descr.children();
-      $(item).slideToggle(500);
-      $(item).empty();
-      setTimeout(function(){
-          $(item).append(contents);
-          $(item).slideToggle(500);
-      }, 300)
-
-
-
-    });
+    // $(largeDescr).each(function(index, item){
+    //   var contents = descr.children();
+    //   $(item).slideToggle(500);
+    //   $(item).empty();
+    //   setTimeout(function(){
+    //       $(item).append(contents);
+    //       $(item).slideToggle(500);
+    //   }, 300)
+    //});
 
 
   }).
