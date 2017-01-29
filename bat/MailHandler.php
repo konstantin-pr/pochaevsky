@@ -1,11 +1,11 @@
 <?php
-	$owner_email = $_POST["owner_email"];
+	$owner_email = "pochaevsky@ukr.net";
 	$headers = 'From:' . $_POST["email"];
 	$subject = 'Лист від ' . $_POST["name"];
 	$messageBody = "";
 
 	if($_POST['name']!='nope'){
-		$messageBody .= '<p>Visitor: ' . $_POST["name"] . '</p>' . "\n";
+		$messageBody .= '<p>Клієнт ' . $_POST["name"] . '</p>' . "\n";
 		$messageBody .= '<br>' . "\n";
 	}
 	if($_POST['email']!='nope'){
@@ -15,19 +15,16 @@
 		$headers = '';
 	}
 	if($_POST['state']!='nope'){
-		$messageBody .= '<p>State: ' . $_POST['state'] . '</p>' . "\n";
+		$messageBody .= '<p>Область: ' . $_POST['state'] . '</p>' . "\n";
 		$messageBody .= '<br>' . "\n";
 	}
 	if($_POST['phone']!='nope'){
-		$messageBody .= '<p>Phone Number: ' . $_POST['phone'] . '</p>' . "\n";
+		$messageBody .= '<p>Телефон: ' . $_POST['phone'] . '</p>' . "\n";
 		$messageBody .= '<br>' . "\n";
 	}
-	if($_POST['fax']!='nope'){
-		$messageBody .= '<p>Fax Number: ' . $_POST['fax'] . '</p>' . "\n";
-		$messageBody .= '<br>' . "\n";
-	}
+
 	if($_POST['message']!='nope'){
-		$messageBody .= '<p>Message: ' . $_POST['message'] . '</p>' . "\n";
+		$messageBody .= '<p>' . $_POST['message'] . '</p>' . "\n";
 	}
 
 	if($_POST["stripHTML"] == 'true'){
@@ -35,10 +32,10 @@
 	}
 
 	try{
-		if(!mail('kean.dev@gmail.com', $subject, $messageBody, $headers)){
+		if(!mail($owner_email, $subject, $messageBody, $headers)){
 			throw new Exception('mail failed');
 		}else{
-			echo 'лист відправлено';
+			echo "{'response':'лист відправлено'}";
 		}
 	}catch(Exception $e){
 		echo $e->getMessage() ."\n";
