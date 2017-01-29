@@ -9,9 +9,9 @@
 					invalidCl:'invalid',
 					notRequiredCl:'notRequired',
 					successCl:'success',
-					successShow:'4000',
+					successShow:'5000',
 					mailHandlerURL:'bat/MailHandler.php',
-					ownerEmail:'support@guardlex.com',
+					ownerEmail:'kean.dev@gmail.com',
 					stripHTML:true,
 					smtpMailServer:'localhost',
 					targets:'input,textarea',
@@ -23,7 +23,7 @@
 						".email":{rx:/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i,target:'input'},
 						".phone":{rx:/^\+?(\d[\d\-\+\(\) ]{5,}\d$)/,target:'input'},
 						".fax":{rx:/^\+?(\d[\d\-\+\(\) ]{5,}\d$)/,target:'input'},
-						".message":{rx:/.{20}/,target:'textarea'}
+					  ".message":{rx:/^$|.{40}/,target:'textarea'}
 					},
 					preFu:function(){
 						_.labels.each(function(){
@@ -36,7 +36,7 @@
 										})()
 							trueVal!=defVal
 								&&inp.val(defVal=trueVal||defVal)
-							label.data({defVal:defVal})								
+							label.data({defVal:defVal})
 							inp
 								.bind('focus',function(){
 									inp.val()==defVal
@@ -46,7 +46,7 @@
 									_.validateFu(label)
 									if(_.isEmpty(label))
 										inp.val(defVal)
-										,_.hideErrorFu(label.removeClass(_.invalidCl))											
+										,_.hideErrorFu(label.removeClass(_.invalidCl))
 								})
 								.bind('keyup',function(){
 									label.hasClass(_.invalidCl)
@@ -56,47 +56,47 @@
 						})
 						_.success=$('.'+_.successCl,_.form).hide()
 					},
-					isRequired:function(el){							
+					isRequired:function(el){
 						return !el.hasClass(_.notRequiredCl)
 					},
-					isValid:function(el){							
+					isValid:function(el){
 						var ret=true
 						$.each(_.rx,function(k,d){
 							if(el.is(k))
-								ret=d.rx.test(el.find(d.target).val())										
+								ret=d.rx.test(el.find(d.target).val())
 						})
-						return ret							
+						return ret
 					},
 					isEmpty:function(el){
 						var tmp
 						return (tmp=el.find(_.targets).val())==''||tmp==el.data('defVal')
 					},
-					validateFu:function(el){							
+					validateFu:function(el){
 						el.each(function(){
 							var th=$(this)
 								,req=_.isRequired(th)
 								,empty=_.isEmpty(th)
-								,valid=_.isValid(th)								
-							
+								,valid=_.isValid(th)
+
 							if(empty&&req)
 								_.showEmptyFu(th.addClass(_.invalidCl))
 							else
 								_.hideEmptyFu(th.removeClass(_.invalidCl))
-							
+
 							if(!empty)
 								if(valid)
 									_.hideErrorFu(th.removeClass(_.invalidCl))
 								else
-									_.showErrorFu(th.addClass(_.invalidCl))								
+									_.showErrorFu(th.addClass(_.invalidCl))
 						})
 					},
 					getValFromLabel:function(label){
 						var val=$('input,textarea',label).val()
-							,defVal=label.data('defVal')								
+							,defVal=label.data('defVal')
 						return label.length?val==defVal?'nope':val:'nope'
 					}
 					,submitFu:function(){
-						_.validateFu(_.labels)							
+						_.validateFu(_.labels)
 						if(!_.form.has('.'+_.invalidCl).length)
 							$.ajax({
 								type: "POST",
@@ -114,7 +114,7 @@
 								success: function(){
 									_.showFu()
 								}
-							})			
+							})
 					},
 					showFu:function(){
 						_.success.slideDown(function(){
@@ -148,13 +148,13 @@
 						label.find('.'+_.emptyCl).slideUp()
 					},
 					init:function(){
-						_.form=_.me						
+						_.form=_.me
 						_.labels=$('label',_.form)
 
 						_.preFu()
-						
+
 						_.controlsFu()
-														
+
 						_.form
 							.bind('submit',function(){
 								if(_.validate)
@@ -164,7 +164,7 @@
 								return false
 							})
 							.bind('reset',function(){
-								_.labels.removeClass(_.invalidCl)									
+								_.labels.removeClass(_.invalidCl)
 								_.labels.each(function(){
 									var th=$(this)
 									_.hideErrorFu(th)

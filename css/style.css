@@ -798,8 +798,20 @@ text-transform: uppercase;
 #form1 .success{
 position: relative;
 padding-bottom: 3px;
-text-transform: uppercase;
+
 color: #fff;
+position: relative;
+padding-bottom: 3px;
+/* text-transform: uppercase; */
+color: #fff;
+letter-spacing: 0.5px;
+font-size: 16px;
+color: #d0fc0a;
+}
+
+#form1 .success strong {
+  color: #ffc300 !important;
+  font-weight: normal;
 }
 #form1 .error, #form1 .empty {
 text-align: left;
