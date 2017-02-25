@@ -5,6 +5,7 @@
 
 	<title>Почаевский</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
 	<link href="js/lightbox2/css/lightbox.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<script src="js/jquery-1.7.2.min.js">
@@ -19,6 +20,239 @@
             <a href="//windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
         </div>
     <![endif]-->
+
+		<style type="text/css">
+		/*Mobile version 
+		.primary-nav-wrapper.open {
+		    visibility: visible;
+		    opacity: 1;
+		}
+
+		.navicon {
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+				z-index: 9999;
+		    visibility: hidden;
+		    width: 25px;
+		    height: 26px;
+		    padding: 52px;
+		    -webkit-transition: all 300ms ease-in-out;
+		    transition: all 300ms ease-in-out;
+		    
+
+		}
+		.fixed {
+		    position: fixed;
+		    z-index: 999;
+		}
+
+		.header-nav-wrapper nav ul li a:before {
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    visibility: hidden;
+		    width: 100%;
+		    height: 2px;
+		    content: '';
+		    -webkit-transition: all .3s ease-in-out 0s;
+		    transition: all .3s ease-in-out 0s;
+		    -webkit-transform: scaleX(0);
+		    transform: scaleX(0);
+		    background-color: #7AE2DE;
+		    z-index: 999;
+		}
+		.header-nav-wrapper nav ul li a:hover:before {
+		    visibility: visible;
+		    -webkit-transform: scaleX(1);
+		    transform: scaleX(1)
+		}
+		.header-nav-wrapper .is-visible {
+		    visibility: visible;
+		    opacity: 1
+		}
+
+		@media screen and (max-width: 1200px) {
+		    .header-nav-wrapper nav {
+		        margin-right: 10px
+		    }
+		    .header-nav-wrapper .logo {
+		        width: 280px
+		    }
+		}
+		@media screen and (max-width: 1024px) {
+    .primary-nav-wrapper {
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: #414A52
+    }
+    .navicon {
+        visibility: visible !important;
+    }
+    .header-nav-wrapper nav {
+        width: 100%;
+        padding: 100px 0 0;
+        text-align: center
+    }
+    .header-nav-wrapper nav ul {
+        display: block
+    }
+    .header-nav-wrapper nav ul li {
+        font-size: 30px;
+        display: block;
+        padding: 10px 20px;
+        border-right: none
+    }
+		.header-nav-wrapper nav ul li a {
+					display: block;
+					padding-bottom: 40px;
+					color: #fff
+			}
+			.header-nav-wrapper nav ul li a:before {
+					display: none
+			}
+		}
+		@media screen and (max-width: 640px) {
+		  #leftPanel {
+		      position: absolute;
+		      overflow: hidden;
+		      width: 268px !important;
+		      height: 400px !important;;
+		      background: url("images/panel_bg1.png");
+		      display: inline-block;
+		      left: -102px;
+		      z-index: 200;
+		  }
+		  .menu {
+		    display: none !important;
+		  }
+			   .header-nav-wrapper {
+					 display: block !important;
+				 }
+		}
+		@media screen and (max-width: 480px) {
+		    .header-nav-wrapper {
+		        border-bottom: solid 5px #7ae2de;
+		        background-color: #414A52
+		    }
+		    .header-nav-wrapper .logo {
+		        width: 250px
+		    }
+		    .navicon {
+		        padding: 52px 35px;
+
+		    }
+		    .header-nav-wrapper .logo {
+		        border-bottom: none
+		    }
+
+		} */
+
+
+		/*Nav icon 
+
+		.nav-toggle {
+		    position: absolute;
+		    z-index:  9999;
+		    top: 50%;
+		    left: 50%;
+		    padding: 16px 15px 16px;
+		    cursor: pointer;
+		    -webkit-transform: translate(-50%, -50%);
+		    transform: translate(-50%, -50%);
+				background: rgba(0, 158, 8, 0.5);
+
+		}
+		.nav-toggle:focus {
+		    outline: none
+		}
+
+		.nav-toggle span {
+		    display: block;
+		    width: 45px;
+		    height: 45px;
+		    cursor: pointer;
+		    background-image: url("images/burger-menu.png");
+				background-position: center;
+				background-size: contain;
+		}
+
+		 .nav-toggle span:before {
+		    top: -10px
+		}
+		.nav-toggle span:after {
+		    bottom: -10px
+		} 
+		.nav-toggle span,
+		.nav-toggle span:before,
+		.nav-toggle span:after {
+		    -webkit-transition: all 300ms ease-in-out;
+		    transition: all 300ms ease-in-out
+		}
+		.nav-toggle.active span {
+		    background-color: transparent; background: none;
+		}
+		.nav-toggle.active span:before,
+		.nav-toggle.active span:after {
+		    top: 0
+		}
+		.nav-toggle.active span:before {
+		    -webkit-transform: rotate(45deg);
+		    transform: rotate(45deg)
+		}
+		.nav-toggle.active span:after {
+		    top: 10px;
+		    -webkit-transform: translatey(-10px) rotate(-45deg);
+		    transform: translatey(-10px) rotate(-45deg)
+		}
+		 
+         .bounceInLeft,
+		.bounceInRight,
+		.fadeInUp,
+		.fadeInUpDelay,
+		.fadeInDown,
+		.fadeInUpD,
+		.fadeInLeft,
+		.fadeInRight,
+		.bounceInDown,
+		.fadeIn {
+		    visibility: visible
+		}
+@-webkit-keyframes scroll-inner {
+		from {
+				margin-top: 15%;
+				opacity: 1
+		}
+		to {
+				margin-top: 75%;
+				opacity: 0
+		}
+}
+@keyframes scroll-inner {
+		from {
+				margin-top: 15%;
+				opacity: 1
+		}
+		to {
+				margin-top: 75%;
+				opacity: 0
+		}
+}
+
+@media screen and (min-width: 641px)
+{
+	.header-nav-wrapper {
+		display: none;
+	}
+} */
+
+		</style>
 </head>
 
 <body>
@@ -35,9 +269,48 @@
 		<div class="arrowR">
 			<a class="nextBtn" href="#"></a>
 		</div>
+		<div class="navicon">
+					<a class="nav-toggle" href="#"><span></span></a>
+		</div>
+		<!--<div class="header-nav-wrapper">
+			<div class="primary-nav-wrapper">
+				<nav>
+				<ul class="primary-nav">
+					<li class="no_disp"><a href="#!/page_splash"></a>
+					</li>
 
+
+					<li><a href="#!/page_home">Концепцiя</a>
+					</li>
+
+
+					<li><a href="#!/page_benefits">Переваги</a>
+					</li>
+
+
+					<li><a href="#!/page_luxury_houses">Таунхауси</a>
+					</li>
+
+
+					<li><a href="#!/page_flats">Квартири</a>
+					</li>
+
+
+					<li><a href="#!/page_terms">Умови</a>
+					</li>
+
+
+					<li><a href="#!/page_mail">Контакти</a>
+					</li>
+				</ul>
+			</nav>
+			</div> -->
+		</div>
 
 		<div id="mainHolder">
+
+
+
 			<div id="leftPanel">
 				<div>
 					<h1><a class="logo" href="#!/page_splash">Почаевский</a>
@@ -83,6 +356,8 @@
 							</li>
 						</ul>
 					</nav>
+
+
 					<!-- END MENU -->
 
 
@@ -128,11 +403,11 @@
 						</li>
 
 
-						<li><a href="#!/page_home"><img alt="" src="images/n1-sm.jpg"></a>
+						<li><a href="#!/page_home"><img alt="" src="images/n1.jpg"></a>
 						</li>
 
 
-						<li><a href="#!/page_home"><img alt="" src="images/n2-sm.jpg"></a>
+						<li><a href="#!/page_home"><img alt="" src="images/n2.jpg"></a>
 						</li>
 
 
@@ -140,7 +415,7 @@
 						</li>
 
 
-						<li><a href="#!/page_home"><img alt="" src="images/day2-sm.jpg"></a>
+						<li><a href="#!/page_home"><img alt="" src="images/day2.jpg"></a>
 						</li>
 
 
@@ -156,7 +431,7 @@
 			<div class="splash">
 				<div>
 					<ul>
-						<li><a href="#!/page_home"><img alt="" src="images/day1-sm.jpg"></a>
+						<li><a href="#!/page_home"><img alt="" src="images/day1.jpg"></a>
 						</li>
 
 
@@ -168,11 +443,11 @@
 						</li>
 
 
-						<li><a href="#!/page_home"><img alt="" src="images/n1-sm.jpg"></a>
+						<li><a href="#!/page_home"><img alt="" src="images/n1.jpg"></a>
 						</li>
 
 
-						<li><a href="#!/page_home"><img alt="" src="images/n2-sm.jpg"></a>
+						<li><a href="#!/page_home"><img alt="" src="images/n2.jpg"></a>
 						</li>
 
 
@@ -180,7 +455,7 @@
 						</li>
 
 
-						<li><a href="#!/page_home"><img alt="" src="images/day2-sm.jpg"></a>
+						<li><a href="#!/page_home"><img alt="" src="images/day2.jpg"></a>
 						</li>
 
 
@@ -641,7 +916,7 @@
 										<div class="large-col large-col1 wrap">
 											<div class="row">
 												<div class="small-coll flat-item">
-													<a class="example-image-link" data-href="images/townhouses/t4-sm.jpg" data-lightbox="example-set" href="images/townhouses/t4.jpg"></a>
+													<a class="example-image-link" data-href="images/townhouses/t4.jpg" data-lightbox="example-set" href="images/townhouses/t4.jpg"></a>
 
 													<div class="data-description">
 														<h4>Таунхаус 4 рівні</h4>
@@ -653,7 +928,7 @@
 
 
 												<div class="small-coll flat-item">
-													<a class="example-image-link"  data-lightbox="example-set" href="images/townhouses/t6-sm.jpg"></a>
+													<a class="example-image-link"  data-lightbox="example-set" href="images/townhouses/t6.jpg"></a>
 
 													<div class="data-description">
 														<h4>Таунхаус 3 рівні</h4>
@@ -665,7 +940,7 @@
 
 
 												<div class="small-coll flat-item">
-													<a class="example-image-link"  data-lightbox="example-set" href="images/townhouses/t5-sm.jpg"></a>
+													<a class="example-image-link"  data-lightbox="example-set" href="images/townhouses/t5.jpg"></a>
 
 													<div class="data-description">
 														<h4>Таунхаус 3 рівні</h4>
@@ -677,7 +952,7 @@
 
 
 												<div class="small-coll flat-item">
-													<a class="example-image-link"  data-lightbox="example-set" href="images/townhouses/t6-sm.jpg"></a>
+													<a class="example-image-link"  data-lightbox="example-set" href="images/townhouses/t6.jpg"></a>
 
 													<div class="data-description">
 														<h4>Таунхаус 3 рівні</h4>
@@ -691,7 +966,7 @@
 
 											<div class="row">
 												<div class="small-coll flat-item">
-													<a class="example-image-link"  data-lightbox="example-set" href="images/townhouses/t3-sm.jpg"></a>
+													<a class="example-image-link"  data-lightbox="example-set" href="images/townhouses/t3.jpg"></a>
 
 													<div class="data-description">
 														<h4>Таунхаус 4 рівні</h4>
@@ -703,7 +978,7 @@
 
 
 												<div class="small-coll flat-item">
-													<a class="example-image-link"  data-lightbox="example-set" href="images/townhouses/t1-sm.jpg"></a>
+													<a class="example-image-link"  data-lightbox="example-set" href="images/townhouses/t1.jpg"></a>
 
 													<div class="data-description">
 														<h4>Таунхаус 3 рівні</h4>
@@ -715,7 +990,7 @@
 
 
 												<div class="small-coll flat-item">
-													<a class="example-image-link"  data-lightbox="example-set" href="images/townhouses/t2-sm.jpg"></a>
+													<a class="example-image-link"  data-lightbox="example-set" href="images/townhouses/t2.jpg"></a>
 
 													<div class="data-description">
 														<h4>Таунхаус 3 рівні</h4>
@@ -727,7 +1002,7 @@
 
 
 												<div class="small-coll flat-item">
-													<a class="example-image-link"  data-lightbox="example-set" href="images/townhouses/t1-sm.jpg"></a>
+													<a class="example-image-link"  data-lightbox="example-set" href="images/townhouses/t1.jpg"></a>
 
 													<div class="data-description">
 														<h4>Таунхаус 3 рівні</h4>
@@ -750,7 +1025,7 @@
 
 
 										<div class="disclaimer">
-											<p>Перша черга будівництва стартує в IV кварталі 2016 року і закінчується в III кварталі 2017року. Всього 24 об’єктів нерухомості.</p>
+											<p>Будівництво першої черги комплексу стартує у 2 кварталі 2017 року і завершується у 2 кварталі 2018 року. Всього у продажі 24 у об’єкта нерухомості.
 										</div>
 										<!-- <div class="planirovka-details">
 
@@ -769,7 +1044,7 @@
 
                                                                 <a class="largeImg" href="images/townhouses/t1.jpg"><img
 
-                                    class="grow" src="images/townhouses/t1-sm.jpg" alt="" /></a>
+                                    class="grow" src="images/townhouses/t1.jpg" alt="" /></a>
 
 
                                                              </div> -->
@@ -830,7 +1105,7 @@
 
 											<div class="row">
 												<div class="flatl flat-item">
-													<a class="example-image-link" data-href="images/flats/d1-sm.jpg" data-lightbox="example-set" href="images/flats/d1.jpg"></a>
+													<a class="example-image-link" data-href="images/flats/d1.jpg" data-lightbox="example-set" href="images/flats/d1.jpg"></a>
 
 													<div class="data-description">
 														<h4>Квартира №4</h4>
@@ -842,7 +1117,7 @@
 
 
 												<div class="flatl flat-item">
-													<a class="example-image-link" data-href="images/flats/d1-sm.jpg" data-lightbox="example-set" href="images/flats/d1.jpg"></a>
+													<a class="example-image-link" data-href="images/flats/d1.jpg" data-lightbox="example-set" href="images/flats/d1.jpg"></a>
 
 													<div class="data-description">
 														<h4>Квартира тип №1</h4>
@@ -857,7 +1132,7 @@
 
 
 									<div class="disclaimer">
-										<p>Перша черга будівництва стартує в IV кварталі 2016 року і закінчується в III кварталі 2017року. Всього 24 об’єктів нерухомості.</p>
+										<p>Будівництво першої черги комплексу стартує у 2 кварталі 2017 року і завершується у 2 кварталі 2018 року. Всього у продажі 24 у об’єкта нерухомості.</p>
 									</div>
 									<!-- <div class="planirovka-details">
 
@@ -876,7 +1151,7 @@
 
                                                              <a class="largeImg" href="images/flats/d2.jpg"><img class="grow"
 
-                                    src="images/flats/d2-sm.jpg" alt="" /></a>
+                                    src="images/flats/d2.jpg" alt="" /></a>
 
 
                                                             </div> -->
@@ -979,7 +1254,7 @@
 								<p class="tphone">068-409-58-99</p>
 
 
-								<p class="tphone">063-135-63-775</p>
+								<p class="tphone">063-135-63-77</p>
 
 
 								<p><a class="temail" href="mailto:pochaevsky@ukr.net">pochaevsky@ukr.net</a>
