@@ -1962,11 +1962,7 @@ p {font-style: italic; }
   background: url("../images/townhouses/e1.jpg") right top no-repeat;
   background-size: contain;;
 }
-
-.row {
-
-}
-
+ 
 .large-col, .small-col, .flats-col {
   display: inline-block;
   vertical-align: top;
