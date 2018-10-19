@@ -977,11 +977,17 @@ p {font-style: italic; }
 
 .gallery {
   width: 680px;
+  height: 340px; 
   margin: 20px 0;
   position: relative;
-  background: url("../images/townhouses/e1.jpg") right top no-repeat;
-  background-size: contain;;
+  background: url("../images/flats/flats.min.jpg") right top no-repeat;
+  background-size: contain;    
 }
+
+.gallery.office {
+        background-size: contain !important;
+        background: url("../images/townhouses/office.min.jpg");
+ }
 
 .row {
 
@@ -1005,12 +1011,41 @@ p {font-style: italic; }
   height: 320px;
 }
 
-.flats-col {
-  min-width: 380px;
-  /*width: 450px;*/
-  position: relative;
-  margin-left: 2%;
+.flats-col { 
+     min-width: 480px;
+    /* width: 450px; */
+    position: relative;   
+    padding-left: 8px;
+/*    border: 2px solid red; */
 }
+.flat-item:nth-child(2) a, .flat-item:nth-child(4) a, .flat-item:nth-child(5) a.greenBg::before,
+.flat-item:nth-child(2)  a.greenBg::before {
+    width:110px !important;
+}
+
+.flat-item:nth-child(3) {
+    margin-left: 4px !important;
+    margin-right: 25px; 
+}
+
+.flat-item:nth-child(5) a {
+    width:115px !important;
+}
+.flat-item:nth-child(5) a.greenBg::before {
+    width:115px !important;
+}
+.flat-item:nth-child(3){
+    margin-left: 10px !important;
+}
+ .greenBg::before {
+   content: "";
+   display: block;
+   position: absolute;
+   z-index: 2;
+   width: 94px;
+   height: 110px;
+   background: rgba(9, 104, 15, 0.4);
+ }
 
 .gallery .row {
   margin: 2px auto;
@@ -1054,19 +1089,8 @@ p {font-style: italic; }
 }
 
 
- .greenBg {
+ 
 
-}
-
- .greenBg::before {
-   content: "";
-   display: block;
-   position: absolute;
-   z-index: 2;
-   width: 94px;
-   height: 149px;
-   background: rgba(9, 104, 15, 0.4);
- }
 
 
 .small-coll a {
@@ -1081,6 +1105,7 @@ p {font-style: italic; }
   height: 100%;
   width: 100%;
 }
+
 .houses {
   padding: 20px;
 }
@@ -1090,13 +1115,31 @@ p {font-style: italic; }
      width: 98px;
      position: relative;
      display: inline-block !important;
-     margin: 2px 46px 2px 0;
+     margin: 0px 16px 2px 16px;
 }
+ 
+ .flatl a {
+   content: "";
+   display: block;
+   position: absolute;
+   z-index: 2;
+   width: 94px;
+   height: 110px;
+   background: rgba(29, 104, 15, 0.3); 
+ }
 
-.flatl a {
-     border: 1px solid #fff ;
-     display: block;
-     height: 146px !important;
+ .greenBg::before {
+   content: "";
+   display: block;
+   position: absolute;
+   z-index: 2;
+   width: 94px;
+   height: 110px;
+   background: rgba(9, 104, 15, 0.4);
+ }
+.gallery.flats .row.first {
+    margin-bottom: 120px;
+    width: 100% !important;
 }
 
 .lightboxOverlay {
