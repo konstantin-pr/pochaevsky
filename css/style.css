@@ -2366,5 +2366,11 @@ p {font-style: italic; }
     overflow-x: hidden;
     padding-bottom: 90px !important;
 }
+.list3>li>img {
+    height: 110% !important;
+}
+.splash li>a>img {
+     height: 110% !important;;
+}
 /*Mobile Vesrion*/
 /*Header navigation*/
