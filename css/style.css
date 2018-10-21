@@ -2357,6 +2357,24 @@ p {font-style: italic; }
     margin-top: 20px;
     
 }
+.soc_icons > li > a {
+    width: 38px;
+    height: 40px;
+     position: relative;
+  transition-timing-function: ease-in;
+    transition-duration: 0.3s;
+}
+.soc_icons i {
+    background:   #fff;
+    color:#3E2723; font-size: 160%; margin: auto 20%;
+       transition-timing-function: ease-in;
+    transition-duration: 0.3s;
+}
+
+.soc_icons a:hover  {
+    margin-top: -5px;
+    
+}
 #page_terms .wrapper, #page_terms .grid_7, #page_terms .container_12, #page_terms,
 #page_office .container_12, #page_office .wrapper, #page_office, 
 #page_flats, #page_flats .container_12, #page_flats .wrapper {
