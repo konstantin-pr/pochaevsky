@@ -24,12 +24,10 @@
 	}
 
 	if($_POST['message']!='nope'){
+        $messageBody = strip_tags($messageBody);
 		$messageBody .= '<p>' . $_POST['message'] . '</p>' . "\n";
 	}
 
-	if($_POST["stripHTML"] == 'true'){
-		$messageBody = strip_tags($messageBody);
-	}
 
 	try{
 		if(!mail($owner_email, $subject, $messageBody, $headers)){

@@ -90,10 +90,14 @@
 									_.showErrorFu(th.addClass(_.invalidCl))
 						})
 					},
-					getValFromLabel:function(label){
-						var val=$('input,textarea',label).val()
-							,defVal=label.data('defVal')
-						return label.length?val==defVal?'nope':val:'nope'
+					getValFromLabel:function(label){ 
+						var elem=jQuery('#'+label);
+                        var val = 'nope'; 
+                        if (label != 'message'){
+                            val = elem.val(); 
+                        } else 
+                            val = elem.text(); 
+						return val;
 					}
 					,submitFu:function(){
 						_.validateFu(_.labels)
@@ -102,12 +106,10 @@
 								type: "POST",
 								url:_.mailHandlerURL,
 								data:{
-									name:_.getValFromLabel($('.name',_.form)),
-									email:_.getValFromLabel($('.email',_.form)),
-									phone:_.getValFromLabel($('.phone',_.form)),
-									fax:_.getValFromLabel($('.fax',_.form)),
-									state:_.getValFromLabel($('.state',_.form)),
-									message:_.getValFromLabel($('.message',_.form)),
+									name:_.getValFromLabel('name'),
+									email:_.getValFromLabel('email'),
+									phone:_.getValFromLabel('phone'),
+									message:_.getValFromLabel('message'),
 									owner_email:_.ownerEmail,
 									stripHTML:_.stripHTML
 								},
