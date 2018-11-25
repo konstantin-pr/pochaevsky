@@ -14,10 +14,10 @@
 	}else{
 		$headers = '';
 	}
-	if($_POST['state']!='nope'){
-		$messageBody .= '<p>Область: ' . $_POST['state'] . '</p>' . "\n";
-		$messageBody .= '<br>' . "\n";
-	}
+//	if($_POST['state']!='nope'){
+//		$messageBody .= '<p>Область: ' . $_POST['state'] . '</p>' . "\n";
+//		$messageBody .= '<br>' . "\n";
+//	}
 	if($_POST['phone']!='nope'){
 		$messageBody .= '<p>Телефон: ' . $_POST['phone'] . '</p>' . "\n";
 		$messageBody .= '<br>' . "\n";
